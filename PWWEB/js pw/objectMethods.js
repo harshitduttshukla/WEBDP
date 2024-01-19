@@ -38,7 +38,7 @@ delete emp.age;
 // console.log(Object.isFrozen(emp));
 
 //seal  => no addition , no deletion , but updating of object is fields is possible
-
+/* 
 const person = {
     name : "Vishwa",
     age: 19,
@@ -52,4 +52,20 @@ console.log(person);
 person.hobby = " footboll"
 console.log(person);
 delete person.name;
+console.log(person);
+ */
+
+// is object key is persont or not
+const person = {
+    name : "Vishwa",
+    age: 19,
+
+}
+// console.log(Object.hasOwn(person,"name"));
+// console.log(Object.hasOwn(person,"city"));
+
+
+console.log(Object.getOwnPropertyNames(person));
+console.log(Object.getOwnPropertyDescriptor(person));
+person.freeze
 console.log(person);
