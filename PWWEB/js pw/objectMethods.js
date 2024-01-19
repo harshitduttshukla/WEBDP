@@ -34,7 +34,22 @@ const emp = {
 
 Object.freeze(emp)  //object is now freezed and it can't be changed
 delete emp.age;
-console.log(emp);
-console.log(Object.isFrozen(emp));
+// console.log(emp);
+// console.log(Object.isFrozen(emp));
 
-//  => no addition , no deletion , but updating of object is fields is possible
+//seal  => no addition , no deletion , but updating of object is fields is possible
+
+const person = {
+    name : "Vishwa",
+    age: 19,
+
+}
+console.log(person);
+Object.seal(person)
+person.name = "hars\hit",
+console.log(person);
+
+person.hobby = " footboll"
+console.log(person);
+delete person.name;
+console.log(person);
