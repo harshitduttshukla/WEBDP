@@ -59,7 +59,15 @@ console.log(person);
 const person = {
     name : "Vishwa",
     age: 19,
+    salary : {
+        value : 6000,
+        enumerable : false
+    }
 
+}
+
+for(k in person){
+    console.log(k);
 }
 // console.log(Object.hasOwn(person,"name"));
 // console.log(Object.hasOwn(person,"city"));
@@ -69,3 +77,4 @@ console.log(Object.getOwnPropertyNames(person));
 console.log(Object.getOwnPropertyDescriptor(person));
 person.freeze
 console.log(person);
+// console.log(Object.getOwnPropertyDescriptor());
